@@ -21,7 +21,6 @@ class Integer
         factors = self.factors.reverse
         factors.each { |factor|
             if factor.is_prime?
-                binding
                 return factor
             end
         }
