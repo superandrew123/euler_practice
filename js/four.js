@@ -2,3 +2,28 @@
 // The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
 
 // Find the largest palindrome made from the product of two 3-digit numbers.
+
+function largest_palindrone(max, min){
+  var i = max;
+  var pali = 0;
+  while(i >= min){
+    var n = max;
+    while(n >= min){
+      var product = n * i;
+      if(product.toString() == reverseString(product.toString()) && product > pali){
+        pali = product;
+      }
+      n--;
+    }
+    i--;
+  }
+  return pali;
+}
+function reverseString(str){
+  var reverse = '';
+  for(var i = str.length - 1; i >= 0; i--){
+    reverse += str[i];
+  }
+  return reverse;
+}
+console.log(largest_palindrone(999,100));
