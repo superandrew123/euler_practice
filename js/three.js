@@ -32,4 +32,3 @@ function is_prime(num){
   }
 }
 console.log(largest_prime_factor(600851475143));
-// largest_prime_factor(600851475143);
